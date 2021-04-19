@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const cheerio = require("cheerio");
+const cors = require('cors');
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -46,6 +47,7 @@ router.get("/taoists", (req, res) => {
 });
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 

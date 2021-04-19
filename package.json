@@ -24,6 +24,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.6",
+    "cors": "^2.8.5",
     "fetch": "^1.1.0"
   },
   "devDependencies": {
