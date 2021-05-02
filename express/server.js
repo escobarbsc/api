@@ -12,7 +12,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
   try {
     axios(
-      `https://testnet.bscscan.com/token/0xe3d50128f5f1559346A274B714627c0596C9e182`
+      `https://bscscan.com/token/0x7065DdA3f8Ec5F6C155648BdeE4420c0525D93C6`
     ).then((response) => {
       const htmldata = cheerio.load(response.data, {
         normalizeWhitespace: true,
@@ -31,7 +31,7 @@ router.get("/", (req, res) => {
 router.get("/taoists", (req, res) => {
   try {
     axios(
-      `https://testnet.bscscan.com/token/0xe3d50128f5f1559346A274B714627c0596C9e182`
+      `https://bscscan.com/token/0x7065DdA3f8Ec5F6C155648BdeE4420c0525D93C6`
     ).then((response) => {
       const htmldata = cheerio.load(response.data, {
         normalizeWhitespace: true,
